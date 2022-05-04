@@ -1,4 +1,16 @@
-#body{
+#b{
     background: rgb(115,63,251);
 background: linear-gradient(342deg, rgba(115,63,251,1) 23%, rgba(227,156,238,1) 100%);
+}
+
+#h{
+    background: rgb(251,194,63);
+background: linear-gradient(0deg, rgba(251,194,63,1) 66%, rgba(205,112,98,1) 100%);
+
+}
+
+#cardcontent{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(63,224,134,1) 0%, rgba(175,124,182,1) 0%, rgba(24,184,251,1) 100%, rgba(21,209,226,1) 100%);
+
 }
