@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Score keeeper</title>
+    <title>Score Keeper</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJN6QZ4RX5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -18,11 +18,15 @@
   gtag('config', 'G-NJN6QZ4RX5');
 </script>
     <style>
-        .winner{
-            color: green;
+        .winner {
+            color: #10b981 !important;
+            animation: winner-pulse 1s ease-in-out infinite alternate;
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
         }
-        .loser{
-            color: red;
+        .loser {
+            color: #ef4444 !important;
+            opacity: 0.7;
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
         }
     </style>
 </head>
@@ -50,22 +54,23 @@
                 <div class="card-content" id="cardcontent">
                   <div class="content">
 
-                    <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-                    <p class="subtitle"> Use below buttons to track score</p>
-                    <div class="select is-rounded">
-                        <select  name="playto" id="playto">
-                            <option value="choose to play">upto</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            
-                        </select>
-
+                    <h1 class="score-display"><span id="p1Display" class="score-number">0</span> to <span id="p2Display" class="score-number">0</span></h1>
+                    <p class="subtitle">Use the buttons below to track score</p>
+                    <div class="select-container">
+                        <label class="select-label">Play up to:</label>
+                        <div class="select is-rounded">
+                            <select name="playto" id="playto">
+                                <option value="choose to play">Select target score</option>
+                                <option value="4">4 points</option>
+                                <option value="5">5 points</option>
+                                <option value="6">6 points</option>
+                                <option value="7">7 points</option>
+                                <option value="8">8 points</option>
+                                <option value="9">9 points</option>
+                                <option value="10" selected>10 points</option>
+                                <option value="11">11 points</option>
+                            </select>
+                        </div>
                     </div>
                   </div>
                 </div>
